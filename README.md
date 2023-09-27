@@ -2,6 +2,7 @@
 Question 1.1 : donner la liste des en-têtes de la réponse HTTP du serveur.
 
   Entete de la réponse : 
+
         HTTP/1.1 200 OK<
         Date: Thu, 21 Sep 2023 04:51:53 GMT 
         Connection: keep-alive 
@@ -12,12 +13,13 @@ Question 1.1 : donner la liste des en-têtes de la réponse HTTP du serveur.
 Question 1.2 : donner la liste des en-têtes qui ont changé depuis la version précédente.
 
   Entete de la réponse : 
+
         HTTP/1.1 200 OK
         Content-Type: application/json
         Date: Thu, 21 Sep 2023 04:58:34 GMT
         Connection: keep-alive 
         Keep-Alive: timeout=5
-        Content-Length: 20< 
+        Content-Length: 20
 
   Après avoir changé de fonction, on a pas de Transfer-Encoding, mais un Content-Length.
 
@@ -205,7 +207,7 @@ Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles
         Connection: keep-alive
         Keep-Alive: timeout=5
 
-	http://localhost:8000/
+  http://localhost:8000/
         HTTP/1.1 200 OK
         X-Powered-By: Express
         Accept-Ranges: bytes
@@ -231,7 +233,7 @@ Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles
         Connection: keep-alive
         Keep-Alive: timeout=5
 
-   http://localhost:8000/index.html 
+  http://localhost:8000/index.html 
         HTTP/1.1 200 OK
         Content-Type: text/html
         Date: Wed, 27 Sep 2023 10:54:52 GMT
