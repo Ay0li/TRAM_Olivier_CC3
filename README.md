@@ -12,7 +12,9 @@ Question 1.1 : donner la liste des en-têtes de la réponse HTTP du serveur.
 Question 1.2 : donner la liste des en-têtes qui ont changé depuis la version précédente.
 
   Entete de la réponse : 
-    HTTP/1.1 200 OK
+    HTTP/1.1 
+    200 
+    OK
     Content-Type: application/json
     Date: Thu, 21 Sep 2023 04:58:34 GMT
     Connection: keep-alive
