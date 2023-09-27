@@ -42,11 +42,11 @@ Question 1.3 : que contient la réponse reçue par le client ?
 
 Question 1.4 : quelle est l'erreur affichée dans la console ?
 
-    [Error: ENOENT: no such file or directory, open 'index.html'] {
-        errno: -2,
-        code: 'ENOENT',
-        syscall: 'open',
-        path: 'index.html'}
+  [Error: ENOENT: no such file or directory, open 'index.html'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'index.html'}
 
   L'erreur "ENOENT (No such file or directory)" est couramment générée par les opérations du système de fichiers (fs) pour indiquer qu'un composant du chemin d'accès spécifié n'existe pas.
   Aucune entité (fichier ou répertoire) correspondante n'a pu être trouvée en utilisant le chemin d'accès fourni.
@@ -122,6 +122,7 @@ Question 1.7 quelles sont les différences entre les scripts http-dev et http-pr
 Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des quatre pages précédentes.
 
   http://localhost:8000/index.html:
+
         État 200 OK
         Version HTTP/1.1
         Transfert 1,05 Ko (taille 895 o)
@@ -129,6 +130,7 @@ Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des 
         Résolution DNS Système
 
   http://localhost:8000/random.html
+
         État 200 OK
         Version HTTP/1.1
         Transfert 178 o (taille 22 o)
@@ -136,6 +138,7 @@ Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des 
         Résolution DNS Système
 
   http://localhost:8000/
+
         État 200 OK
         Version HTTP/1.1
         Transfert 1,05 Ko (taille 895 o)
@@ -143,6 +146,7 @@ Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des 
         Résolution DNS Système
 
   http://localhost:8000/dont-exist
+  
         État 404 Not Found
         Version HTTP/1.1
         Transfert 197 o (taille 34 o)
