@@ -43,10 +43,10 @@ Question 1.3 : que contient la réponse reçue par le client ?
 Question 1.4 : quelle est l'erreur affichée dans la console ?
 
   [Error: ENOENT: no such file or directory, open 'index.html'] {
-    errno: -2,
-    code: 'ENOENT',
-    syscall: 'open',
-    path: 'index.html'}
+        errno: -2,
+        code: 'ENOENT',
+        syscall: 'open',
+        path: 'index.html'}
 
   L'erreur "ENOENT (No such file or directory)" est couramment générée par les opérations du système de fichiers (fs) pour indiquer qu'un composant du chemin d'accès spécifié n'existe pas.
   Aucune entité (fichier ou répertoire) correspondante n'a pu être trouvée en utilisant le chemin d'accès fourni.
@@ -121,7 +121,7 @@ Question 1.7 quelles sont les différences entre les scripts http-dev et http-pr
 
 Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des quatre pages précédentes.
 
-  http://localhost:8000/index.html:
+  http://localhost:8000/index.html :
 
         État 200 OK
         Version HTTP/1.1
@@ -129,7 +129,7 @@ Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des 
         Priorité de la requête Highest
         Résolution DNS Système
 
-  http://localhost:8000/random.html
+  http://localhost:8000/random.html :
 
         État 200 OK
         Version HTTP/1.1
@@ -137,7 +137,7 @@ Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des 
         Priorité de la requête Highest
         Résolution DNS Système
 
-  http://localhost:8000/
+  http://localhost:8000/ :
 
         État 200 OK
         Version HTTP/1.1
@@ -145,8 +145,8 @@ Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des 
         Priorité de la requête Highest
         Résolution DNS Système
 
-  http://localhost:8000/dont-exist
-  
+  http://localhost:8000/dont-exist :
+
         État 404 Not Found
         Version HTTP/1.1
         Transfert 197 o (taille 34 o)
@@ -156,6 +156,7 @@ Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des 
 Question 2.1 donner les URL des documentations de chacun des modules installés par la commande précédente.
 
   Avec la commande "npm fund" on obtient les urls des différentes documentations :
+
         https://tidelift.com/funding/github/npm/loglevel
         https://opencollective.com/eslint
         https://github.com/sponsors/nzakas
@@ -176,14 +177,16 @@ Question 2.1 donner les URL des documentations de chacun des modules installés 
 
 Question 2.2 vérifier que les trois routes fonctionnent.
 
-  GET http://localhost:8000/index.html
+  GET http://localhost:8000/index.html :
+
         État 200 OK
         Version HTTP/1.1
         Transfert 1,21 Ko (taille 895 o)
         Priorité de la requête Highest
         Résolution DNS Système
 
-  GET http://localhost:8000/
+  GET http://localhost:8000/ :
+
         État 200 OK
         Version HTTP/1.1
         Transfert 1,21 Ko (taille 895 o)
@@ -191,7 +194,8 @@ Question 2.2 vérifier que les trois routes fonctionnent.
         Résolution DNS Système
 
   	
-  GET http://localhost:8000/random/12
+  GET http://localhost:8000/random/12 :
+
         État 200 OK
         Version HTTP/1.1
         Transfert 393 o (taille 164 o)
@@ -201,7 +205,8 @@ Question 2.2 vérifier que les trois routes fonctionnent.
 
 Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles sont nouvelles par rapport au serveur HTTP ?
 
-  http://localhost:8000/random/12
+  http://localhost:8000/random/12 :
+
         HTTP/1.1 200 OK
         X-Powered-By: Express
         Content-Type: text/html; charset=utf-8
@@ -211,7 +216,8 @@ Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles
         Connection: keep-alive
         Keep-Alive: timeout=5
 
-  http://localhost:8000/
+  http://localhost:8000/ :
+
         HTTP/1.1 200 OK
         X-Powered-By: Express
         Accept-Ranges: bytes
@@ -224,7 +230,8 @@ Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles
         Connection: keep-alive
         Keep-Alive: timeout=5
 
-  http://localhost:8000/index.html                       
+  http://localhost:8000/index.html : 
+
         HTTP/1.1 200 OK                                               
         X-Powered-By: Express                                   
         Accept-Ranges: bytes                                    
@@ -237,7 +244,8 @@ Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles
         Connection: keep-alive
         Keep-Alive: timeout=5
 
-  http://localhost:8000/index.html 
+  http://localhost:8000/index.html :
+
         HTTP/1.1 200 OK
         Content-Type: text/html
         Date: Wed, 27 Sep 2023 10:54:52 GMT
@@ -264,14 +272,16 @@ Question 2.5 indiquer quelle est l'option (activée par défaut) qui redirige / 
 
 Question 2.6 visiter la page d'accueil puis rafraichir (Ctrl+R) et ensuite forcer le rafraichissement (Ctrl+Shift+R). Quels sont les codes HTTP sur le fichier style.css ? Justifier.
 
-  http://localhost:8000/style.css avec (Ctrl+R)
+  http://localhost:8000/style.css avec (Ctrl+R) :
+
         État 304 Not Modified
         Version HTTP/1.1
         Transfert 719 o (taille 454 o)
         Politique de référent strict-origin-when-cross-origin
         Résolution DNS Système
 
-  http://localhost:8000/style.css avec (Ctrl+Shift+R)
+  http://localhost:8000/style.css avec (Ctrl+Shift+R) :
+
         État 200 OK
         Version HTTP/1.1
         Transfert 769 o (taille 454 o)
