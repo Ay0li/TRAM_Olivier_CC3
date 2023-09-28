@@ -55,7 +55,7 @@
 <strong>Question 1.5 donner le code de requestListener() modifié avec gestion d'erreur en async/await.</strong>
   
 
-<script>
+  <script>
     async function requestListener(_request, response) {
     
       try {
@@ -80,7 +80,7 @@
         response.end("Erreur interne du serveur (500) : Le fichier index.html est introuvable.");
       }
     }
-</script>
+  </script>
 <strong>Question 1.6 indiquer ce que cette commande a modifié dans votre projet.</strong>
 
     cette commande à ajouter dans le package.json des "dépendencies" et "devdependencies" 
