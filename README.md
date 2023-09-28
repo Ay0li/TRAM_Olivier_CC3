@@ -3,7 +3,7 @@
 
   En-tête de la réponse : 
 
-        HTTP/1.1 200 OK<
+        HTTP/1.1 200 OK
         Date: Thu, 21 Sep 2023 04:51:53 GMT 
         Connection: keep-alive 
         Keep-Alive: timeout=5
