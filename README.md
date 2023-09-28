@@ -56,6 +56,7 @@
   
 
   async function requestListener(_request, response) {
+    
     try {
 
       // Lecture du contenu du fichier "index.html" de manière asynchrone
