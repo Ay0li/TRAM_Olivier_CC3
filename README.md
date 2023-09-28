@@ -21,7 +21,7 @@
         Keep-Alive: timeout=5
         Content-Length: 20
 
-  Après avoir changé de fonction, on a pas de Transfer-Encoding, mais un Content-Length.
+  Après avoir changé de fonction, nous n'avons plus l'en-tête 'Transfer-Encoding', mais plutôt l'en-tête 'Content-Length'.
 
 
 <strong>Question 1.3 : que contient la réponse reçue par le client ?</strong>
@@ -34,10 +34,7 @@
       Priorité de la requête Highest
       Résolution DNS Système
 
-  le serveur HTTP renvoie le contenu du fichier "index.html" au client lorsque la requête est réussie (statut 200 OK). 
-  Par conséquent, la réponse reçue par le client contiendra le contenu du fichier "index.html" en tant que corps de la réponse. 
-  Le type de contenu de la réponse est défini comme "text/html" dans l'en-tête de la réponse.
-  Donc, la réponse reçue par le client contiendra le contenu HTML du fichier "index.html". 
+  Le serveur HTTP renvoie le contenu du fichier "index.html" au client lorsque la requête est réussie (statut 200 OK). Par conséquent, la réponse reçue par le client contiendra le contenu du fichier "index.html" en tant que corps de la réponse. Le type de contenu de la réponse est défini comme "text/html" dans l'en-tête de la réponse. Donc, la réponse reçue par le client contiendra le contenu HTML du fichier "index.html".
 
 
 <strong>Question 1.4 : quelle est l'erreur affichée dans la console ?</strong>
@@ -48,8 +45,7 @@
       syscall: 'open',
       path: 'index.html'}
 
-  L'erreur "ENOENT (No such file or directory)" est couramment générée par les opérations du système de fichiers (fs) pour indiquer qu'un composant du chemin d'accès spécifié n'existe pas.
-  Aucune entité (fichier ou répertoire) correspondante n'a pu être trouvée en utilisant le chemin d'accès fourni.
+  L'erreur "ENOENT (No such file or directory)" est couramment générée par les opérations du système de fichiers (fs) pour indiquer qu'un composant du chemin d'accès spécifié n'existe pas. Aucune entité (fichier ou répertoire) correspondante n'a pu être trouvée en utilisant le chemin d'accès fourni.
 
 
 <strong>Question 1.5 donner le code de requestListener() modifié avec gestion d'erreur en async/await.</strong>
@@ -81,10 +77,13 @@
   
 <strong>Question 1.6 indiquer ce que cette commande a modifié dans votre projet.</strong>
 
-    cette commande à ajouter dans le package.json des "dépendencies" et "devdependencies" 
-    qui sont requis pour exécuter le projet et developpé le projet.
-    on a "cross-env": "^7.0.3" qui est le package necessaire pour exécuter le projet et qui est en version "7.0.3"
-    on a "nodemon": "^3.0.1" qui est le package necessaire pour le developpement du projet et est en version "3.0.1"
+  Cette commande a ajouté deux dépendances dans le fichier package.json, à la fois dans "dependencies" et "devDependencies", qui sont nécessaires pour exécuter le projet et le développer.
+
+  Nous avons ajouté les dépendances suivantes :
+
+    "cross-env": "^7.0.3" : Il s'agit du package nécessaire pour exécuter le projet et il est en version "7.0.3".
+
+    "nodemon": "^3.0.1" : Il s'agit du package nécessaire pour le développement du projet et il est en version "3.0.1".
 
 
 <strong>Question 1.7 quelles sont les différences entre les scripts http-dev et http-prod ?</strong>
@@ -116,8 +115,9 @@
 
     Le serveur fonctionne sur http://localhost:8000
 
-  Nous remarquons qu'en mode dev, apres avoir sauvegarder les modifications de "server-http.mjs" le server s'est redemarrer automatiquement et est uniquement acessible par le developpeur.
-  alors que en mode production il n'y a eu aucun redemarrage automatique, car si cela se produisait les personnes qui sont sur le site se feront deconnecter du site.
+  Nous remarquons que, en mode développement (http-dev), après avoir sauvegardé les modifications de "server-http.mjs", le serveur se redémarre automatiquement, et il n'est accessible que par le développeur.
+
+  En revanche, en mode production (http-prod), il n'y a eu aucun redémarrage automatique. Si cela se produisait, les utilisateurs du site seraient déconnectés.
 
 
 <strong>Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des quatre pages précédentes.</strong>
@@ -156,7 +156,7 @@
 
 <strong>Question 2.1 donner les URL des documentations de chacun des modules installés par la commande précédente.</strong>
 
-  Avec la commande "npm fund" on obtient les urls des différentes documentations :
+  Avec la commande "npm fund" on obtient les URLs des différentes documentations :
 
         https://tidelift.com/funding/github/npm/loglevel
         https://opencollective.com/eslint
@@ -254,21 +254,17 @@
         Keep-Alive: timeout=5
         Transfer-Encoding: chunked
         
-  Ici on compare le localhost:8000/index.html, sur la gauche nous voyons que il y'a l'api Express qui ajoute de nouvels en-têtes, ici on peut voir,
-  "X-Powered-By: Express ", "Accept-Ranges: bytes", "Cache-Control: public, max-age=0", "Last-Modified: Wed, 27 Sep 2023 06:27:53 GMT", 
-  "ETag: W/"37f-18ad55295e6", "Content-Type: text/html; charset=UTF-8", "Content-Length: 895".
+  ci, nous comparons localhost:8000/index.html. À gauche, nous voyons que l'API Express ajoute de nouveaux en-têtes, notamment "X-Powered-By: Express", "Accept-Ranges: bytes", "Cache-Control: public, max-age=0", "Last-Modified: Wed, 27 Sep 2023 06:27:53 GMT", "ETag: W/"37f-18ad55295e6"", "Content-Type: text/html; charset=UTF-8", et "Content-Length: 895".
   
 
 <strong>Question 2.4 quand l'événement listening est-il déclenché ?</strong>
 
-  L'événement "listening" est déclenché une fois que le serveur est opérationnel et prêt à accepter les connexions HTTP entrantes.
-  soit "listening" marche quand un port est spécifié avec succès.
+  L'événement "listening" est déclenché une fois que le serveur est opérationnel et prêt à accepter les connexions HTTP entrantes. Cela se produit lorsque le serveur a lié avec succès un port spécifié et est prêt à gérer les requêtes HTTP entrantes.
   
 
 <strong>Question 2.5 indiquer quelle est l'option (activée par défaut) qui redirige / vers /index.html ?</strong>
 
-  L'option qui redirige automatiquement / vers /index.html, se trouve dans "express.static", cette fonctionnalité est spécifique à cette fonction.
-  Ici il vérifie si le "index.html" existe dans le dossier static, et le renvoie directement en réponse à "/"
+  L'option qui redirige automatiquement / vers /index.html se trouve dans "express.static". Cette fonctionnalité est spécifique à cette fonction. Elle vérifie si le fichier "index.html" existe dans le dossier statique et le renvoie directement en réponse à "/" si aucun chemin de fichier spécifique n'est spécifié.
 
 
 <strong>Question 2.6 visiter la page d'accueil puis rafraichir (Ctrl+R) et ensuite forcer le rafraichissement (Ctrl+Shift+R). Quels sont les codes HTTP sur le fichier style.css ? Justifier.</strong>
@@ -289,9 +285,9 @@
         Politique de référent strict-origin-when-cross-origin
         Résolution DNS Système
 
-  Pour cette question on doit activé le cache, alors ici avec le cache comme nous avons juste rafraichit la page avec (Ctrl+R),
-  comme le fichier n'a pas eu de modification alors le fichier est chargé depuis le cache.
-  Alors que avec un (Ctrl+Shift+R) ici on force le rafraichissement donc le chargement des fichiers, c'est pourquoi on obtient un code 200.
+  Pour cette question, nous devons activer le cache. Avec le cache activé, lorsque nous utilisons simplement (Ctrl+R) pour rafraîchir la page, le navigateur envoie une requête avec l'en-tête "If-Modified-Since". Si le fichier n'a pas été modifié depuis la dernière requête, le serveur renvoie un statut "304 Not Modified" pour indiquer que le fichier n'a pas besoin d'être téléchargé à nouveau, car il est toujours dans le cache du navigateur.
+
+  En revanche, avec (Ctrl+Shift+R), nous forçons le rafraîchissement du cache. Par conséquent, le serveur renvoie le fichier CSS comme s'il était nouveau, d'où le statut "200 OK".
 
 
 <strong>Question 2.7 vérifier que l'affichage change bien entre le mode production et le mode development.</strong>
