@@ -1,7 +1,7 @@
 # TRAM_Olivier_CC3
 <strong>Question 1.1 : donner la liste des en-têtes de la réponse HTTP du serveur.</strong>
 
-  Entete de la réponse : 
+  En-tête de la réponse : 
 
         HTTP/1.1 200 OK<
         Date: Thu, 21 Sep 2023 04:51:53 GMT 
@@ -12,7 +12,7 @@
 
 <strong>Question 1.2 : donner la liste des en-têtes qui ont changé depuis la version précédente.</strong>
 
-  Entete de la réponse : 
+  En-tête de la réponse : 
 
         HTTP/1.1 200 OK
         Content-Type: application/json
@@ -55,8 +55,9 @@
 <strong>Question 1.5 donner le code de requestListener() modifié avec gestion d'erreur en async/await.</strong>
   
 
+<script>
     async function requestListener(_request, response) {
-      
+    
       try {
 
         // Lecture du contenu du fichier "index.html" de manière asynchrone
@@ -79,7 +80,7 @@
         response.end("Erreur interne du serveur (500) : Le fichier index.html est introuvable.");
       }
     }
-
+</script>
 <strong>Question 1.6 indiquer ce que cette commande a modifié dans votre projet.</strong>
 
     cette commande à ajouter dans le package.json des "dépendencies" et "devdependencies" 
