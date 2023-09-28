@@ -298,7 +298,7 @@
 
   Affichage en mode développement:
 
-        ReferenceError: concole is not defined
+        ReferenceError: console is not defined
         at file:///Users/oliviertram/Desktop/devweb-tp5/TRAM_Olivier_CC3/server-express.mjs:38:3
         at Layer.handle_error (/Users/oliviertram/Desktop/devweb-tp5/TRAM_Olivier_CC3/node_modules/express/lib/router/layer.js:71:5)
         at trim_prefix (/Users/oliviertram/Desktop/devweb-tp5/TRAM_Olivier_CC3/node_modules/express/lib/router/index.js:326:13)
