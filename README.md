@@ -293,7 +293,7 @@ Question 2.6 visiter la page d'accueil puis rafraichir (Ctrl+R) et ensuite force
   Alors que avec un (Ctrl+Shift+R) ici on force le rafraichissement donc le chargement des fichiers, c'est pourquoi on obtient un code 200.
 
 
-Question 2.7 vérifier que l'affichage change bien entre le mode production et le mode development.
+<strong>Question 2.7 vérifier que l'affichage change bien entre le mode production et le mode development.</strong>
 
   Affichage en mode production:
 
