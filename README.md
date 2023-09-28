@@ -1,5 +1,5 @@
 # TRAM_Olivier_CC3
-Question 1.1 : donner la liste des en-têtes de la réponse HTTP du serveur.
+<strong>Question 1.1 : donner la liste des en-têtes de la réponse HTTP du serveur.</strong>
 
   Entete de la réponse : 
 
@@ -10,7 +10,7 @@ Question 1.1 : donner la liste des en-têtes de la réponse HTTP du serveur.
         Transfer-Encoding: chunked
 
 
-Question 1.2 : donner la liste des en-têtes qui ont changé depuis la version précédente.
+<strong>Question 1.2 : donner la liste des en-têtes qui ont changé depuis la version précédente.</strong>
 
   Entete de la réponse : 
 
@@ -24,7 +24,7 @@ Question 1.2 : donner la liste des en-têtes qui ont changé depuis la version p
   Après avoir changé de fonction, on a pas de Transfer-Encoding, mais un Content-Length.
 
 
-Question 1.3 : que contient la réponse reçue par le client ?
+<strong>Question 1.3 : que contient la réponse reçue par le client ?</strong>
 
   on suppose qu'il y a un fichier "index.html" alors on obtient ceci : 
 
@@ -40,7 +40,7 @@ Question 1.3 : que contient la réponse reçue par le client ?
   Donc, la réponse reçue par le client contiendra le contenu HTML du fichier "index.html". 
 
 
-Question 1.4 : quelle est l'erreur affichée dans la console ?
+<strong>Question 1.4 : quelle est l'erreur affichée dans la console ?</strong>
 
   [Error: ENOENT: no such file or directory, open 'index.html'] {
         errno: -2,
@@ -52,7 +52,7 @@ Question 1.4 : quelle est l'erreur affichée dans la console ?
   Aucune entité (fichier ou répertoire) correspondante n'a pu être trouvée en utilisant le chemin d'accès fourni.
 
 
-Question 1.5 donner le code de requestListener() modifié avec gestion d'erreur en async/await
+<strong>Question 1.5 donner le code de requestListener() modifié avec gestion d'erreur en async/await.</strong>
 
   async function requestListener(_request, response) {
     try {
@@ -78,7 +78,7 @@ Question 1.5 donner le code de requestListener() modifié avec gestion d'erreur 
   }
 
 
-Question 1.6 indiquer ce que cette commande a modifié dans votre projet.
+<strong>Question 1.6 indiquer ce que cette commande a modifié dans votre projet.</strong>
 
     cette commande à ajouter dans le package.json des "dépendencies" et "devdependencies" 
     qui sont requis pour exécuter le projet et developpé le projet.
@@ -86,7 +86,7 @@ Question 1.6 indiquer ce que cette commande a modifié dans votre projet.
     on a "nodemon": "^3.0.1" qui est le package necessaire pour le developpement du projet et est en version "3.0.1"
 
 
-Question 1.7 quelles sont les différences entre les scripts http-dev et http-prod ?
+<strong>Question 1.7 quelles sont les différences entre les scripts http-dev et http-prod ?</strong>
 
   execution de npm run http-dev :
 
@@ -119,7 +119,7 @@ Question 1.7 quelles sont les différences entre les scripts http-dev et http-pr
   alors que en mode production il n'y a eu aucun redemarrage automatique, car si cela se produisait les personnes qui sont sur le site se feront deconnecter du site.
 
 
-Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des quatre pages précédentes.
+<strong>Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des quatre pages précédentes.</strong>
 
   http://localhost:8000/index.html :
 
@@ -153,7 +153,7 @@ Question 1.8 donner les codes HTTP reçus par votre navigateur pour chacune des 
         Priorité de la requête Highest
         Résolution DNS Système
 
-Question 2.1 donner les URL des documentations de chacun des modules installés par la commande précédente.
+<strong>Question 2.1 donner les URL des documentations de chacun des modules installés par la commande précédente.</strong>
 
   Avec la commande "npm fund" on obtient les urls des différentes documentations :
 
@@ -175,7 +175,7 @@ Question 2.1 donner les URL des documentations de chacun des modules installés 
         https://github.com/sponsors/mysticatea
     
 
-Question 2.2 vérifier que les trois routes fonctionnent.
+<strong>Question 2.2 vérifier que les trois routes fonctionnent.</strong>
 
   GET http://localhost:8000/index.html :
 
@@ -203,7 +203,7 @@ Question 2.2 vérifier que les trois routes fonctionnent.
         Résolution DNS Système
 
 
-Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles sont nouvelles par rapport au serveur HTTP ?
+<strong>Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles sont nouvelles par rapport au serveur HTTP ?</strong>
 
   http://localhost:8000/random/12 :
 
@@ -258,19 +258,19 @@ Question 2.3 lister les en-têtes des réponses fournies par Express. Lesquelles
   "ETag: W/"37f-18ad55295e6", "Content-Type: text/html; charset=UTF-8", "Content-Length: 895".
   
 
-Question 2.4 quand l'événement listening est-il déclenché ?
+<strong>Question 2.4 quand l'événement listening est-il déclenché ?</strong>
 
   L'événement "listening" est déclenché une fois que le serveur est opérationnel et prêt à accepter les connexions HTTP entrantes.
   soit "listening" marche quand un port est spécifié avec succès.
   
 
-Question 2.5 indiquer quelle est l'option (activée par défaut) qui redirige / vers /index.html ?
+<strong>Question 2.5 indiquer quelle est l'option (activée par défaut) qui redirige / vers /index.html ?</strong>
 
   L'option qui redirige automatiquement / vers /index.html, se trouve dans "express.static", cette fonctionnalité est spécifique à cette fonction.
   Ici il vérifie si le "index.html" existe dans le dossier static, et le renvoie directement en réponse à "/"
 
 
-Question 2.6 visiter la page d'accueil puis rafraichir (Ctrl+R) et ensuite forcer le rafraichissement (Ctrl+Shift+R). Quels sont les codes HTTP sur le fichier style.css ? Justifier.
+<strong>Question 2.6 visiter la page d'accueil puis rafraichir (Ctrl+R) et ensuite forcer le rafraichissement (Ctrl+Shift+R). Quels sont les codes HTTP sur le fichier style.css ? Justifier.</strong>
 
   http://localhost:8000/style.css avec (Ctrl+R) :
 
