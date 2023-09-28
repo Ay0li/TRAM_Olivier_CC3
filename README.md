@@ -55,30 +55,30 @@
 <strong>Question 1.5 donner le code de requestListener() modifié avec gestion d'erreur en async/await.</strong>
   
 
-  async function requestListener(_request, response) {
-    
-    try {
-
-      // Lecture du contenu du fichier "index.html" de manière asynchrone
-      const contents = await fs.readFile("index.html", "utf8");
-
-      // Configuration de l'en-tête de la réponse pour indiquer que le contenu est HTML
-      response.setHeader("Content-Type", "text/html");
+    async function requestListener(_request, response) {
       
-      // Envoi du statut 200 (OK) et du contenu du fichier en tant que réponse
-      response.writeHead(200);
-      response.end(contents);
-    } catch (error) {
-      // En cas d'erreur lors de la lecture du fichier
-      console.error(error);
+      try {
 
-      // Configuration de l'en-tête de la réponse avec un statut 500 (Erreur interne du serveur)
-      response.writeHead(500);
+        // Lecture du contenu du fichier "index.html" de manière asynchrone
+        const contents = await fs.readFile("index.html", "utf8");
 
-      // Envoi d'un message d'erreur personnalisé en tant que réponse
-      response.end("Erreur interne du serveur (500) : Le fichier index.html est introuvable.");
+        // Configuration de l'en-tête de la réponse pour indiquer que le contenu est HTML
+        response.setHeader("Content-Type", "text/html");
+        
+        // Envoi du statut 200 (OK) et du contenu du fichier en tant que réponse
+        response.writeHead(200);
+        response.end(contents);
+      } catch (error) {
+        // En cas d'erreur lors de la lecture du fichier
+        console.error(error);
+
+        // Configuration de l'en-tête de la réponse avec un statut 500 (Erreur interne du serveur)
+        response.writeHead(500);
+
+        // Envoi d'un message d'erreur personnalisé en tant que réponse
+        response.end("Erreur interne du serveur (500) : Le fichier index.html est introuvable.");
+      }
     }
-  }
 
 <strong>Question 1.6 indiquer ce que cette commande a modifié dans votre projet.</strong>
 
