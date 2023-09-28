@@ -43,17 +43,17 @@
 <strong>Question 1.4 : quelle est l'erreur affichée dans la console ?</strong>
 
   [Error: ENOENT: no such file or directory, open 'index.html'] {
-        errno: -2,
-        code: 'ENOENT',
-        syscall: 'open',
-        path: 'index.html'}
+      errno: -2,
+      code: 'ENOENT',
+      syscall: 'open',
+      path: 'index.html'}
 
   L'erreur "ENOENT (No such file or directory)" est couramment générée par les opérations du système de fichiers (fs) pour indiquer qu'un composant du chemin d'accès spécifié n'existe pas.
   Aucune entité (fichier ou répertoire) correspondante n'a pu être trouvée en utilisant le chemin d'accès fourni.
 
 
 <strong>Question 1.5 donner le code de requestListener() modifié avec gestion d'erreur en async/await.</strong>
-
+  <body>
   async function requestListener(_request, response) {
     try {
       // Lecture du contenu du fichier "index.html" de manière asynchrone
@@ -76,7 +76,7 @@
       response.end("Erreur interne du serveur (500) : Le fichier index.html est introuvable.");
     }
   }
-
+  </body>
 
 <strong>Question 1.6 indiquer ce que cette commande a modifié dans votre projet.</strong>
 
