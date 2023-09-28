@@ -53,9 +53,11 @@
 
 
 <strong>Question 1.5 donner le code de requestListener() modifié avec gestion d'erreur en async/await.</strong>
-  <body>
+  
+
   async function requestListener(_request, response) {
     try {
+
       // Lecture du contenu du fichier "index.html" de manière asynchrone
       const contents = await fs.readFile("index.html", "utf8");
 
@@ -76,7 +78,6 @@
       response.end("Erreur interne du serveur (500) : Le fichier index.html est introuvable.");
     }
   }
-  </body>
 
 <strong>Question 1.6 indiquer ce que cette commande a modifié dans votre projet.</strong>
 
